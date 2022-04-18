@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Contract module that helps prevent reentrant calls to a function. Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier available, which can be applied to functions to make sure there are no nested (reentrant) calls to them. Note that because there is a single `nonReentrant` guard, functions marked as `nonReentrant` may not call one another. This can be worked around by making those functions `private`, and then adding `external` `nonReentrant` entry points to them. TIP: If you would like to learn more about reentrancy and alternative ways to protect against it, check out our blog post https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"github/Saitanobi/staking/contracts/helpers/ReentrancyGuard.sol": "ReentrancyGuard"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 100000
+		},
+		"remappings": []
+	},
+	"sources": {
+		"github/Saitanobi/staking/contracts/helpers/ReentrancyGuard.sol": {
+			"keccak256": "0xd29d3ea88157ac9005430d38c36abbd86ab628fb5cb3c4c3fb91d2a5a09bff51",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b0397e4f880919b51cc8d787dc31754b87d8d2d72ffc12c3a7b355914906b85d",
+				"dweb:/ipfs/QmTA6qAG3vbACNSD1NATLWweKookxM5XqUhu4s12PZmKnU"
+			]
+		}
+	},
+	"version": 1
+}

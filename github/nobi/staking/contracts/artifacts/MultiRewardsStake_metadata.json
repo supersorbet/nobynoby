@@ -1,0 +1,567 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "rewardTokens_",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "stakingToken_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					}
+				],
+				"name": "RewardAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					}
+				],
+				"name": "RewardPaid",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Staked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdrawn",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "addRewardToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "amount",
+						"type": "uint256[]"
+					}
+				],
+				"name": "depositRewardTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "earned",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "emergencyWithdrawal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "exit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getRewardForDuration",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getRewardTokens",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "token",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "rewardRate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "rewardPerTokenStored",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct MultiRewardsStake.RewardToken[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastTimeRewardApplicable",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastUpdateTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "reward",
+						"type": "uint256[]"
+					}
+				],
+				"name": "notifyRewardAmount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "periodFinish",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "removeRewardToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "rewardForToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rewardPerToken",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rewardsDuration",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "stake",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "stakingToken",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalRewardTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"github/nobi/staking/contracts/MultiRewardsBeefSTEAK.sol": "MultiRewardsStake"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 100000
+		},
+		"remappings": []
+	},
+	"sources": {
+		"github/nobi/staking/contracts/MultiRewardsBeefSTEAK.sol": {
+			"keccak256": "0x11188afcf3ab365e78d923d9587ef431a2d6b5127e3012bf73057a8d9bad0107",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4d8b943a0b6431ce7539969ec023d3171880a2994def9c457b58036acdbecd45",
+				"dweb:/ipfs/QmPKdSQkEh7tATWvcFXUpyqbLFFUdU1zRRArdZbEC4xgV3"
+			]
+		},
+		"github/nobi/staking/contracts/helpers/Context.sol": {
+			"keccak256": "0x2d9821ede311a3c16183811be8bdc666e88c69d9d50321e3dff025fe7630d373",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3719bc7fe267a79e84641b88901b10dbc58d27edaea65b7811d39ca7d2a3e409",
+				"dweb:/ipfs/QmRDDpaByM3MhWs61gXmfaxoygifCJhLvguEFDGahhWMfX"
+			]
+		},
+		"github/nobi/staking/contracts/helpers/Ownable.sol": {
+			"keccak256": "0x28adb5f006cef52b73b613db99d0bc113d7b129a021e594dfdcf50225f260b3f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3789666515f95aea6d9d3ebdbc25d7434182ba5599a7c2823ddd51bc5b6a0174",
+				"dweb:/ipfs/QmSjW9pxWLnwqYKptEVQkxB8UWk99HuDGMZa6NjMBFoy5o"
+			]
+		},
+		"github/nobi/staking/contracts/helpers/ReentrancyGuard.sol": {
+			"keccak256": "0xd29d3ea88157ac9005430d38c36abbd86ab628fb5cb3c4c3fb91d2a5a09bff51",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b0397e4f880919b51cc8d787dc31754b87d8d2d72ffc12c3a7b355914906b85d",
+				"dweb:/ipfs/QmTA6qAG3vbACNSD1NATLWweKookxM5XqUhu4s12PZmKnU"
+			]
+		},
+		"github/nobi/staking/contracts/interfaces/IERC20.sol": {
+			"keccak256": "0xb1aff979a5fa6968157ae8d85e0e06b910844c7ab72d0c8f6c90b3a1ef11c729",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://eca4b1237dd40467c528de5bcba06ac32bd340c75b1f7e76ee57f0be117e5520",
+				"dweb:/ipfs/QmfN76uFXumbuRb9vxHY2gvJCAaN73s9xrebPc1SwYcMfa"
+			]
+		},
+		"github/nobi/staking/contracts/libraries/Address.sol": {
+			"keccak256": "0xc3025aaa95aa8f9e80b9a7f76c40a4b94b60b065bd3bbe3cb0a476e95846d658",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://89d75bac0237f5c371a2519ce92fbacf3c4ecdcff4cc9f10a5f3673d82876f56",
+				"dweb:/ipfs/QmeTypoZNTYKmSdmKiFvJxwot72RE5Bddi5ssX3heW2xdP"
+			]
+		},
+		"github/nobi/staking/contracts/libraries/Math.sol": {
+			"keccak256": "0x8a903be45bf1d301fe43eea3c02b80dc30fed65e4fa2200cc21c134f36b5ac4f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://738b1f2a968bf541334fa08b95c7bc4b14901bc66d808f0706b47902c5501123",
+				"dweb:/ipfs/Qma8Z8WUyN5XFacMhjr1aynMT3Bf4zmMTjsHPkEinePBjs"
+			]
+		},
+		"github/nobi/staking/contracts/libraries/SafeERC20.sol": {
+			"keccak256": "0xd6354d43d1b73a5e5e3b41a5dce81630a40c27cfc8583cc8bd9f54b3c2f41bc5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c590833f8817d434db6335b00e883fa5e05bd902092b14633c5a48c586448f2a",
+				"dweb:/ipfs/Qmc6QTygvZ1R8jttToMySHKusEV3BCzsdJiU2VqzoiWBJm"
+			]
+		},
+		"github/nobi/staking/contracts/libraries/SafeMath.sol": {
+			"keccak256": "0xf2a8aba77f7c47ac2fb29897622e3d3ceaf0dd3c1ef685895242fa9541f27c34",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5b1704be230acf1d4555a032bcd8b38d48dfe2763ea61ced2fd5e8889036acb2",
+				"dweb:/ipfs/QmezxGeADPzpJA8PdSCYHQRDoytY14xY8SkvP9FwMVp54K"
+			]
+		}
+	},
+	"version": 1
+}

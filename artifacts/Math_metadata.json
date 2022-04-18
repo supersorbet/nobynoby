@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Standard math utilities missing in the Solidity language.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"MultiRewardsBeefSTEAK_flat.sol": "Math"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 100000
+		},
+		"remappings": []
+	},
+	"sources": {
+		"MultiRewardsBeefSTEAK_flat.sol": {
+			"keccak256": "0x7c8448d4d75fa33227103d8dc31beaee4738444b5c600df97b7da41de8bfe809",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c0d1ca52849eca4a126bd8ee56f213606144281ad3eb860b984a4f7bf01848df",
+				"dweb:/ipfs/QmdhXACJ9x9c54ebda1qwvzRcC8xwfuZPxGs5qLa6vcZ8E"
+			]
+		}
+	},
+	"version": 1
+}

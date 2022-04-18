@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Standard math utilities missing in the Solidity language.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"github/Saitanobi/staking/contracts/libraries/Meth.sol": "Math"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 100000
+		},
+		"remappings": []
+	},
+	"sources": {
+		"github/Saitanobi/staking/contracts/libraries/Meth.sol": {
+			"keccak256": "0x8a903be45bf1d301fe43eea3c02b80dc30fed65e4fa2200cc21c134f36b5ac4f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://738b1f2a968bf541334fa08b95c7bc4b14901bc66d808f0706b47902c5501123",
+				"dweb:/ipfs/Qma8Z8WUyN5XFacMhjr1aynMT3Bf4zmMTjsHPkEinePBjs"
+			]
+		}
+	},
+	"version": 1
+}
